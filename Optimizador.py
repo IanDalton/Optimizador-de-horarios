@@ -2,12 +2,11 @@ import json
 from operator import pos
 from re import M
 import numpy as np
-import itertools
+from math import floor
 
 archivo = json.load(open("Materias.json", "r"))
-listaTemp = ["(61.81)", "(61.82)", "(71.20)", "(81.11)", "(82.15)", "(94.61)"]
 
-i = 0
+# Valores modificables por los usuarios en la pagina
 vectorIdealTemp = [2, 2, 2, 2, 2, 2, 12, 0, 0]
 creditos = 24
 
@@ -16,7 +15,7 @@ def calculadoraDeAngulos(vectorIdeal, lista):
     vectorIdeal = np.array(vectorIdeal)
     vectorTotal = [0, 0, 0, 0, 0, 0, 0, 0, 0]
     sumaMatriz = []
-
+    # Genero una matriz con todos los vectores de las materias
     for materia in archivo:
         for info in archivo[materia]:
             if materia in lista:
@@ -33,11 +32,12 @@ def calculadoraDeAngulos(vectorIdeal, lista):
                         info["Clases a la tarde"],
                     ]
                 )
-
+    # Sumo todos los vectores de la matriz armada
     for vector in sumaMatriz:
         for i in range(len(vector)):
             vectorTotal[i] += vector[i]
 
+    # Lo convierto todo a un vector y obtengo el cos del angulo
     vectorTotal = np.array(vectorTotal)
 
     angulo = vectorIdeal.dot(vectorTotal) / (
@@ -52,30 +52,52 @@ def generadorDeListas(preferencias):
     posiblesComb = []
     topCombinaciones = [["", 0], ["", 0], ["", 0]]
     i = 0
+
+    # Armo una lista con todas las materias posibles
     for materia in archivo:
         todMaterias.append(materia)
-    for Creditos in range(1, round(creditos / 3)):
+
+    """  Genero todas las combinaciones posibles con todas las posibles agrupaciones que pueden tener 
+
+        Por ejemplo tenemos 24 creditos asi que como maximo podemos anotarnos a 8 materias,
+        pero no hay que descartar las combinaciones que se pueden dar desde 7,6,5 o 4.
+        Como el usuario puede especificar si quiere cursar solo 3,6 o 9 creditos generamos las combinaciones de 1,2 y 3 pero
+        luego se descartan.
+
+    """
+    for Creditos in range(1, floor(creditos / 3)):
         for combinaciones in combinations(todMaterias, Creditos):
             posiblesComb.append([])
             for materia in combinaciones:
                 posiblesComb[i].append(materia)
             i += 1
 
+    # Elimino las que no cumplen con los creditos especificados
     posiblesComb = verificadorComb(posiblesComb)
 
+    """ Calculo el angulo de las combinaciones restantes y si es mayor al registrado en el primer puesto
+        simplemente muevo todo un lugar a la derecha y lo registro en el primer lugar.
+        Verifico tambien si es mas grande que el segundo o el tercero, si se les ocurre una forma mas eficiente, genial. """
     for grupo in posiblesComb:
         angulo = calculadoraDeAngulos(vectorIdealTemp, grupo)
         if angulo >= topCombinaciones[0][1]:
             topCombinaciones[2] = topCombinaciones[1]
             topCombinaciones[1] = topCombinaciones[0]
             topCombinaciones[0] = [grupo, angulo]
+        elif angulo >= topCombinaciones[1][1]:
+            topCombinaciones[2] = topCombinaciones[1]
+            topCombinaciones[1] = [grupo, angulo]
+        elif angulo >= topCombinaciones[2][1]:
+            topCombinaciones[2] = [grupo, angulo]
 
     return topCombinaciones
 
 
 def verificadorComb(vector):
+    # registro la lista para eliminar la posicion que no cumple con los creditos pedidos
     eliminar = []
 
+    # Hago un ciclo en donde sumo el valor de los creditos y si la suma es distinta a lo pedido se anota para eliminar
     for i in range(len(vector)):
         suma = 0
         for materia in vector[i]:
@@ -83,6 +105,8 @@ def verificadorComb(vector):
                 suma += datos["Creditos"]
         if suma != creditos:
             eliminar.append(i)
+
+    # Se eliminan las combinaciones que no cumplen
     eliminados = 0
     for valor in eliminar:
         vector.pop(valor - eliminados)
