@@ -1,0 +1,167 @@
+{
+    "(61.81)": [
+        {
+            "Nombre": "Microeconomía",
+            "Parcial en semana 1": 0,
+            "Parcial en semana 2": 0,
+            "Parcial en semana 3": 1,
+            "Parcial 2 en semana 1": 1,
+            "Parcial 2 en semana 2": 0,
+            "Parcial 2 en semana 3": 0,
+            "Clases a la manana": 1,
+            "Clases al mediodia": 0,
+            "Clases a la tarde": 0,
+            "Creditos": 3
+        }
+    ],
+    "(61.82)": [
+        {
+            "Nombre": "Macroeconomía",
+            "Parcial en semana 1": 0,
+            "Parcial en semana 2": 0,
+            "Parcial en semana 3": 1,
+            "Parcial 2 en semana 1": 0,
+            "Parcial 2 en semana 2": 0,
+            "Parcial 2 en semana 3": 1,
+            "Clases a la manana": 0,
+            "Clases al mediodia": 1,
+            "Clases a la tarde": 0,
+            "Creditos": 3
+        }
+    ],
+    "(71.20)": [
+        {
+            "Nombre": "Informatica General",
+            "Parcial en semana 1": 0,
+            "Parcial en semana 2": 1,
+            "Parcial en semana 3": 0,
+            "Parcial 2 en semana 1": 0,
+            "Parcial 2 en semana 2": 1,
+            "Parcial 2 en semana 3": 0,
+            "Clases a la manana": 1,
+            "Clases al mediodia": 0,
+            "Clases a la tarde": 0,
+            "Creditos": 3
+        }
+    ],
+    "(81.11)": [
+        {
+            "Nombre": "Informatica General",
+            "Parcial en semana 1": 0,
+            "Parcial en semana 2": 0,
+            "Parcial en semana 3": 1,
+            "Parcial 2 en semana 1": 0,
+            "Parcial 2 en semana 2": 1,
+            "Parcial 2 en semana 3": 0,
+            "Clases a la manana": 1,
+            "Clases al mediodia": 1,
+            "Clases a la tarde": 0,
+            "Creditos": 6
+        }
+    ],
+    "(82.15)": [
+        {
+            "Nombre": "Matematica Aplicada",
+            "Parcial en semana 1": 0.5,
+            "Parcial en semana 2": 0.5,
+            "Parcial en semana 3": 0,
+            "Parcial 2 en semana 1": 0.5,
+            "Parcial 2 en semana 2": 0.5,
+            "Parcial 2 en semana 3": 0,
+            "Clases a la manana": 0,
+            "Clases al mediodia": 1,
+            "Clases a la tarde": 1,
+            "Creditos": 6
+        }
+    ],
+    "(94.61)": [
+        {
+            "Nombre": "Filosofía",
+            "Parcial en semana 1": 1,
+            "Parcial en semana 2": 0,
+            "Parcial en semana 3": 0,
+            "Parcial 2 en semana 1": 1,
+            "Parcial 2 en semana 2": 0,
+            "Parcial 2 en semana 3": 0,
+            "Clases a la manana": 1,
+            "Clases al mediodia": 0,
+            "Clases a la tarde": 0,
+            "Creditos": 3
+        }
+    ],
+    "(81.07)": [
+        {
+            "Nombre": "Sistemas Contables",
+            "Parcial en semana 1": 0,
+            "Parcial en semana 2": 1,
+            "Parcial en semana 3": 0,
+            "Parcial 2 en semana 1": 0,
+            "Parcial 2 en semana 2": 1,
+            "Parcial 2 en semana 3": 0,
+            "Clases a la manana": 0,
+            "Clases al mediodia": 1,
+            "Clases a la tarde": 1,
+            "Creditos": 6
+        }
+    ],
+    "(93.16)": [
+        {
+            "Nombre": "Matematica Discreta",
+            "Parcial en semana 1": 0,
+            "Parcial en semana 2": 0,
+            "Parcial en semana 3": 1,
+            "Parcial 2 en semana 1": 0,
+            "Parcial 2 en semana 2": 0,
+            "Parcial 2 en semana 3": 1,
+            "Clases a la manana": 1,
+            "Clases al mediodia": 0,
+            "Clases a la tarde": 0,
+            "Creditos": 3
+        }
+    ],
+    "(93.39)": [
+        {
+            "Nombre": "Estadistica",
+            "Parcial en semana 1": 0,
+            "Parcial en semana 2": 1,
+            "Parcial en semana 3": 0,
+            "Parcial 2 en semana 1": 0,
+            "Parcial 2 en semana 2": 1,
+            "Parcial 2 en semana 3": 0,
+            "Clases a la manana": 0,
+            "Clases al mediodia": 2,
+            "Clases a la tarde": 0,
+            "Creditos": 6
+        }
+    ],
+    "(94.24)": [
+        {
+            "Nombre": "Metodologia del Aprendizaje",
+            "Parcial en semana 1": 0,
+            "Parcial en semana 2": 1,
+            "Parcial en semana 3": 0,
+            "Parcial 2 en semana 1": 0,
+            "Parcial 2 en semana 2": 1,
+            "Parcial 2 en semana 3": 0,
+            "Clases a la manana": 0,
+            "Clases al mediodia": 1,
+            "Clases a la tarde": 0,
+            "Creditos": 3
+        }
+    ],
+    "(94.60)": [
+        {
+            "Nombre": "Panorama Historico Global",
+            "Parcial en semana 1": 1,
+            "Parcial en semana 2": 0,
+            "Parcial en semana 3": 0,
+            "Parcial 2 en semana 1": 0,
+            "Parcial 2 en semana 2": 1,
+            "Parcial 2 en semana 3": 0,
+            "Clases a la manana": 0,
+            "Clases al mediodia": 1,
+            "Clases a la tarde": 0,
+            "Creditos": 0
+        }
+    ]
+}
