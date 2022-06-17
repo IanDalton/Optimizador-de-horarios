@@ -11,7 +11,10 @@
             "Clases a la manana": 1,
             "Clases al mediodia": 0,
             "Clases a la tarde": 0,
-            "Creditos": 3
+            "Creditos": 3,
+            "Correlativas": [
+                "(93.20)"
+            ]
         }
     ],
     "(61.82)": [
@@ -26,7 +29,10 @@
             "Clases a la manana": 0,
             "Clases al mediodia": 1,
             "Clases a la tarde": 0,
-            "Creditos": 3
+            "Creditos": 3,
+            "Correlativas": [
+                "(93.20)"
+            ]
         }
     ],
     "(71.20)": [
@@ -41,12 +47,13 @@
             "Clases a la manana": 1,
             "Clases al mediodia": 0,
             "Clases a la tarde": 0,
-            "Creditos": 3
+            "Creditos": 3,
+            "Correlativas": []
         }
     ],
     "(81.11)": [
         {
-            "Nombre": "Informatica General",
+            "Nombre": "Contabilidad Gerencial",
             "Parcial en semana 1": 0,
             "Parcial en semana 2": 0,
             "Parcial en semana 3": 1,
@@ -56,7 +63,10 @@
             "Clases a la manana": 1,
             "Clases al mediodia": 1,
             "Clases a la tarde": 0,
-            "Creditos": 6
+            "Creditos": 6,
+            "Correlativas": [
+                "(81.07)"
+            ]
         }
     ],
     "(82.15)": [
@@ -71,7 +81,11 @@
             "Clases a la manana": 0,
             "Clases al mediodia": 1,
             "Clases a la tarde": 1,
-            "Creditos": 6
+            "Creditos": 6,
+            "Correlativas": [
+                "(93.39)",
+                "(93.16)"
+            ]
         }
     ],
     "(94.61)": [
@@ -86,7 +100,8 @@
             "Clases a la manana": 1,
             "Clases al mediodia": 0,
             "Clases a la tarde": 0,
-            "Creditos": 3
+            "Creditos": 3,
+            "Correlativas": []
         }
     ],
     "(81.07)": [
@@ -101,7 +116,8 @@
             "Clases a la manana": 0,
             "Clases al mediodia": 1,
             "Clases a la tarde": 1,
-            "Creditos": 6
+            "Creditos": 6,
+            "Correlativas": []
         }
     ],
     "(93.16)": [
@@ -116,7 +132,8 @@
             "Clases a la manana": 1,
             "Clases al mediodia": 0,
             "Clases a la tarde": 0,
-            "Creditos": 3
+            "Creditos": 3,
+            "Correlativas": []
         }
     ],
     "(93.39)": [
@@ -131,7 +148,11 @@
             "Clases a la manana": 0,
             "Clases al mediodia": 2,
             "Clases a la tarde": 0,
-            "Creditos": 6
+            "Creditos": 6,
+            "Correlativas": [
+                "(93.20)",
+                "(93.21)"
+            ]
         }
     ],
     "(94.24)": [
@@ -146,7 +167,8 @@
             "Clases a la manana": 0,
             "Clases al mediodia": 1,
             "Clases a la tarde": 0,
-            "Creditos": 3
+            "Creditos": 3,
+            "Correlativas": []
         }
     ],
     "(94.60)": [
@@ -161,7 +183,128 @@
             "Clases a la manana": 0,
             "Clases al mediodia": 1,
             "Clases a la tarde": 0,
-            "Creditos": 0
+            "Creditos": 0,
+            "Correlativas": []
+        }
+    ],
+    "(71.80)": [
+        {
+            "Nombre": "Utilitarios en Informática",
+            "Parcial en semana 1": 0,
+            "Parcial en semana 2": 1,
+            "Parcial en semana 3": 0,
+            "Parcial 2 en semana 1": 0,
+            "Parcial 2 en semana 2": 1,
+            "Parcial 2 en semana 3": 0,
+            "Clases a la manana": 0,
+            "Clases al mediodia": 0,
+            "Clases a la tarde": 2,
+            "Creditos": 6,
+            "Correlativas": []
+        }
+    ],
+    "(81.06)": [
+        {
+            "Nombre": "Introducción a la administración",
+            "Parcial en semana 1": 1,
+            "Parcial en semana 2": 0,
+            "Parcial en semana 3": 0,
+            "Parcial 2 en semana 1": 0,
+            "Parcial 2 en semana 2": 1,
+            "Parcial 2 en semana 3": 0,
+            "Clases a la manana": 0,
+            "Clases al mediodia": 1,
+            "Clases a la tarde": 1,
+            "Creditos": 6,
+            "Correlativas": []
+        }
+    ],
+    "(71.45)": [
+        {
+            "Nombre": "Estructura de Datos y Programación",
+            "Parcial en semana 1": 0,
+            "Parcial en semana 2": 0,
+            "Parcial en semana 3": 0,
+            "Parcial 2 en semana 1": 0,
+            "Parcial 2 en semana 2": 0,
+            "Parcial 2 en semana 3": 0,
+            "Clases a la manana": 0,
+            "Clases al mediodia": 0,
+            "Clases a la tarde": 0,
+            "Creditos": 0,
+            "Correlativas": [
+                "(71.20)"
+            ]
+        }
+    ],
+    "(11.75)": [
+        {
+            "Nombre": "Estadística Aplicada I",
+            "Parcial en semana 1": 0,
+            "Parcial en semana 2": 0,
+            "Parcial en semana 3": 0,
+            "Parcial 2 en semana 1": 0,
+            "Parcial 2 en semana 2": 0,
+            "Parcial 2 en semana 3": 0,
+            "Clases a la manana": 0,
+            "Clases al mediodia": 0,
+            "Clases a la tarde": 0,
+            "Creditos": 0,
+            "Correlativas": [
+                "(82.15)"
+            ]
+        }
+    ],
+    "(71.88)": [
+        {
+            "Nombre": "Gestión de Datos",
+            "Parcial en semana 1": 0,
+            "Parcial en semana 2": 0,
+            "Parcial en semana 3": 0,
+            "Parcial 2 en semana 1": 0,
+            "Parcial 2 en semana 2": 0,
+            "Parcial 2 en semana 3": 0,
+            "Clases a la manana": 0,
+            "Clases al mediodia": 0,
+            "Clases a la tarde": 0,
+            "Creditos": 0,
+            "Correlativas": [
+                "(71.20)"
+            ]
+        }
+    ],
+    "(72.88)": [
+        {
+            "Nombre": "Visualización de Información",
+            "Parcial en semana 1": 0,
+            "Parcial en semana 2": 0,
+            "Parcial en semana 3": 0,
+            "Parcial 2 en semana 1": 0,
+            "Parcial 2 en semana 2": 0,
+            "Parcial 2 en semana 3": 0,
+            "Clases a la manana": 0,
+            "Clases al mediodia": 0,
+            "Clases a la tarde": 0,
+            "Creditos": 0,
+            "Correlativas": [
+                "(71.20)"
+            ]
+        }
+    ],
+    "(94.62)": [
+        {
+            "Nombre": "Ética en los Negocios",
+            "Parcial en semana 1": 0,
+            "Parcial en semana 2": 0,
+            "Parcial en semana 3": 0,
+            "Parcial 2 en semana 1": 0,
+            "Parcial 2 en semana 2": 0,
+            "Parcial 2 en semana 3": 0,
+            "Clases a la manana": 0,
+            "Clases al mediodia": 0,
+            "Clases a la tarde": 0,
+            "Creditos": 0,
+            "Correlativas": []
         }
     ]
 }

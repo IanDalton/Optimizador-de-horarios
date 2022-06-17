@@ -1,14 +1,52 @@
 import json
-from operator import pos
-from re import M
 import numpy as np
 from math import floor
 
-archivo = json.load(open("Materias.json", "r"))
+archivo = json.load(open("materias.json", "r"))
 
-# Valores modificables por los usuarios en la pagina
-vectorIdealTemp = [2, 2, 2, 2, 2, 2, 12, 0, 0]
+"""
+Valores modificables
+    vectorIdealTemp:
+        -cantidad de parciales en la primera semana
+        -cantidad de parciales en la segunda semana
+        -cantidad de parciales en la tercera semana
+        -cantidad de parciales (2) en la primera semana
+        -cantidad de parciales (2) en la segunda semana
+        -cantidad de parciales (2) en la tercera semana
+        -cantidad de bloques de 3 horas durante la mañana    |
+        -cantidad de bloques de 3 horas durante la mediodia  | Por ej. con 24 creditos esto suma 8, con 27 suma 9
+        -cantidad de bloques de 3 horas durante la tarde     |
+    excluirTemp:
+        -Se excluye las materias que listas,
+        idealmente poner las que ya aprobaste y las que no te interesan cursar
+        -EJ: ["(93.39)","(93.16)","(81.07)"]
+    creditos:
+        -Son los creditos que se desean cursar, por default viene en 24 pero se puede cambiar a cualquier multiplo de 3
+"""
+
+vectorIdealTemp = [2, 2, 2, 2, 2, 2, 8, 0, 0]
+excluirTemp = []
 creditos = 24
+
+
+def filtroCorrelativas(todo,excluir):
+    """
+    La idea es recibir la lista completa de materias y si están en la lista de excluir sacarlas.
+    Luego filtrar la lista restante para excluir las que tienen las correlativas incluidas
+    """
+
+    for materia in excluir:
+        todo.remove(materia)
+
+    excluir = []
+    for materia in todo:
+        info = archivo[materia][0]["Correlativas"]
+        if len(info) != 0:
+            for dato in info:
+                if (dato in todo) and (materia not in excluir):
+                    excluir.append(materia)
+    for materia in excluir:
+        todo.remove(materia)
 
 
 def calculadoraDeAngulos(vectorIdeal, lista):
@@ -46,7 +84,7 @@ def calculadoraDeAngulos(vectorIdeal, lista):
     return angulo
 
 
-def generadorDeListas(preferencias):
+def generadorDeListas(preferencias,excluir):
     # calculo que esto se puede optimizar y usar una sola matriz pero lo voy a dejar para despues
     todMaterias = []
     posiblesComb = []
@@ -57,8 +95,9 @@ def generadorDeListas(preferencias):
     for materia in archivo:
         todMaterias.append(materia)
 
-    """  Genero todas las combinaciones posibles con todas las posibles agrupaciones que pueden tener 
-
+    filtroCorrelativas(todMaterias,excluir)
+    """
+    Genero todas las combinaciones posibles con todas las posibles agrupaciones que pueden tener
         Por ejemplo tenemos 24 creditos asi que como maximo podemos anotarnos a 8 materias,
         pero no hay que descartar las combinaciones que se pueden dar desde 7,6,5 o 4.
         Como el usuario puede especificar si quiere cursar solo 3,6 o 9 creditos generamos las combinaciones de 1,2 y 3 pero
@@ -73,8 +112,8 @@ def generadorDeListas(preferencias):
             i += 1
 
     # Elimino las que no cumplen con los creditos especificados
-    posiblesComb = verificadorComb(posiblesComb)
 
+    verificadorComb(posiblesComb)
     """ Calculo el angulo de las combinaciones restantes y si es mayor al registrado en el primer puesto
         simplemente muevo todo un lugar a la derecha y lo registro en el primer lugar.
         Verifico tambien si es mas grande que el segundo o el tercero, si se les ocurre una forma mas eficiente, genial. """
@@ -112,9 +151,6 @@ def verificadorComb(vector):
         vector.pop(valor - eliminados)
         eliminados += 1
 
-    return vector
-
-
 # Codigo que me robe de el ejemplo, no entiendo que pasa aca
 
 
@@ -139,5 +175,5 @@ def combinations(iterable, r):
         yield tuple(pool[i] for i in indices)
 
 
-combinaciones = generadorDeListas(vectorIdealTemp)
+combinaciones = generadorDeListas(vectorIdealTemp,excluirTemp)
 print(combinaciones)
